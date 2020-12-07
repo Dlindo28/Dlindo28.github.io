@@ -20,7 +20,9 @@
     "client": "npm start --prefix client",
     "server": "cross-env NODE_ENV=dev nodemon server.js",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "client-install": "cd client && npm install"
+    "client-install": "cd client && npm install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -31,5 +33,5 @@
   "bugs": {
     "url": "https://github.com/Dlindo28/Dlindo28.github.io/issues"
   },
-  "homepage": "https://github.com/Dlindo28/Dlindo28.github.io#readme"
+  "homepage": "http://dlindo28.github.io/"
 }
