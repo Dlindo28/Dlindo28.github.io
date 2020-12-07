@@ -1,0 +1,23 @@
+#nametag {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.Header {
+  align-self: center;
+  grid-column: 2 / span 6;
+  grid-row: 1 / 2;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  margin-left: auto;
+}
+
+.links a {
+  margin-left: 50px;
+}

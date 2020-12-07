@@ -1,0 +1,25 @@
+#Projects {
+  height: 100%;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+}
+
+.ProjectContainer {
+  justify-self: stretch;
+  grid-column: auto / span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ProjectBlock {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+#block-1 {
+  background-image: url(../images/acnh-1.gif);
+}

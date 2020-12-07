@@ -1,0 +1,16 @@
+#Home {
+  height: 100%;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+#Home p {
+  font-family: "ABeeZee", sans-serif;
+}
+
+#Home img {
+  height: 400px;
+  grid-column-end: 8;
+  justify-self: end;
+}

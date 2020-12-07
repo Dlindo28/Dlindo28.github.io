@@ -1,0 +1,14 @@
+.Footer {
+  grid-column: 2 / span 6;
+  grid-row: 3 / span 1;
+  align-self: center;
+}
+
+.footerIcon {
+  margin-right: 50px;
+}
+
+.footerIcon:hover {
+  transition: var(--color-transition);
+  color: var(--red);
+}

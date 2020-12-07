@@ -1,0 +1,24 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: minmax(60px, 1fr) repeat(6, minmax(50px, 190px)) minmax(
+      60px,
+      1fr
+    );
+  grid-template-rows: 120px 1fr 100px;
+  column-gap: 30px;
+}
+
+.ContentContainer {
+  overflow: hidden;
+  grid-column: 2 / span 6;
+  grid-row: 2 / 3;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.ContentContainer::-webkit-scrollbar {
+  display: none;
+}
