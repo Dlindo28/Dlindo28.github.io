@@ -1,0 +1,15 @@
+.Alert {
+  background-color: var(--white);
+  color: var(--dark);
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#exitTag {
+  color: var(--red);
+}
+
+#exitTag:hover {
+  cursor: pointer;
+}

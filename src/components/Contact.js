@@ -3,7 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "emailjs-com";
 import "../css/Contact.css";
 
+import Alert from "./Alert";
+
 const Contact = () => {
+  const [alert, setAlert] = useState({
+    show: false,
+    error: true,
+  });
   const [contact, setContact] = useState({
     from_name: null,
     email: null,
@@ -19,6 +25,7 @@ const Contact = () => {
 
   const sendMessage = (e) => {
     e.preventDefault();
+    document.querySelector(".Alert").style.display = "none";
     emailjs
       .send(
         process.env.REACT_APP_E_SERVICE_ID,
@@ -26,8 +33,21 @@ const Contact = () => {
         contact,
         process.env.REACT_APP_E_USER_ID
       )
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      .then(() => {
+        document.querySelector(".Alert").style.display = "flex";
+        setAlert({
+          show: true,
+          error: false,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        document.querySelector(".Alert").style.display = "flex";
+        setAlert({
+          show: true,
+          error: true,
+        });
+      });
   };
   return (
     <div id="Contact">
@@ -74,6 +94,16 @@ const Contact = () => {
         />
         <input type="submit" value="Submit" className="clearfix" />
       </form>
+      <Alert
+        error={alert.error}
+        onClick={() => {
+          document.querySelector(".Alert").style.display = "none";
+          setAlert({
+            show: false,
+            error: true,
+          });
+        }}
+      />
     </div>
   );
 };
