@@ -93,7 +93,11 @@ const About = () => {
           alt="Resume"
           id="resumeImage"
         />
-        <a href={require("../images/resume.pdf")} target="_blank">
+        <a
+          href={require("../images/resume.pdf")}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button>Download Resume</Button>
         </a>
       </div>

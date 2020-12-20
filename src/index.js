@@ -8,11 +8,6 @@ import {
   faInstagramSquare,
   faLinkedin,
   faGoogle,
-  faReact,
-  faPython,
-  faJava,
-  faJs,
-  faGit,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
@@ -22,7 +17,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import "./index.css";
-import App from "./screens/App";
+import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 library.add(
@@ -33,12 +28,7 @@ library.add(
   faAngleUp,
   faAngleDown,
   faCircle,
-  faGoogle,
-  faReact,
-  faPython,
-  faJava,
-  faJs,
-  faGit
+  faGoogle
 );
 
 ReactDOM.render(

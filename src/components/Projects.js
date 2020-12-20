@@ -20,12 +20,14 @@ const Projects = () => {
             id="acnh"
             href="https://github.com/Dlindo28/ACNH-Stalks-Helper"
             target="_blank"
+            rel="noopener noreferrer"
           ></a>
           <div className="projectTitle">
             <p>ACNH Stalks Tool</p>
             <a
               href="https://github.com/Dlindo28/ACNH-Stalks-Helper"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={["fab", "github"]} />
             </a>
@@ -47,6 +49,7 @@ const Projects = () => {
             <a
               href="https://github.com/Dlindo28/MusicUncoveredBot"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={["fab", "github"]} />
             </a>
@@ -56,12 +59,17 @@ const Projects = () => {
           <a
             href="https://dl-imaging.herokuapp.com"
             target="_blank"
+            rel="noopener noreferrer"
             className="ProjectBlock"
             id="dl"
           ></a>
           <div className="projectTitle">
             <p>DL Imaging</p>
-            <a href="https://github.com/Dlindo28/dl-imaging" target="_blank">
+            <a
+              href="https://github.com/Dlindo28/dl-imaging"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={["fab", "github"]} />
             </a>
           </div>

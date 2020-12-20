@@ -1,37 +1,48 @@
 {
-  "name": "daniel-lindo-portfolio",
+  "name": "client",
   "version": "1.0.0",
-  "description": "Daniel Lindo's Portfolio Site",
-  "main": "server.js",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "emailjs-com": "^2.6.4",
-    "express": "^4.17.1",
-    "form-data": "^3.0.0",
-    "jsonwebtoken": "^8.5.1"
+    "font-awesome": "^4.7.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-icons": "^4.1.0",
+    "react-redux": "^7.2.1",
+    "react-router": "^5.2.0",
+    "react-scripts": "^3.4.3",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "concurrently": "^5.3.0",
-    "cross-env": "^7.0.2",
-    "nodemon": "^2.0.6"
+    "gh-pages": "^3.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "npm start --prefix client",
-    "server": "cross-env NODE_ENV=dev nodemon server.js",
-    "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "client-install": "cd client && npm install"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dlindo28/Dlindo28.github.io"
-  },
+  "homepage": "http://dlindo28.github.io",
   "author": "Daniel Lindo",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Dlindo28/Dlindo28.github.io/issues"
-  },
-  "homepage": "https://github.com/Dlindo28/Dlindo28.github.io#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

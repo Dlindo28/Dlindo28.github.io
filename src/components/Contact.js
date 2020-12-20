@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "emailjs-com";
 import "../css/Contact.css";
 
-import Button from "./Button";
-
 const Contact = () => {
   const [contact, setContact] = useState({
     from_name: null,
