@@ -26,28 +26,46 @@ const Contact = () => {
   const sendMessage = (e) => {
     e.preventDefault();
     document.querySelector(".Alert").style.display = "none";
-    emailjs
-      .send(
-        process.env.REACT_APP_E_SERVICE_ID,
-        process.env.REACT_APP_E_TEMPLATE_ID,
-        contact,
-        process.env.REACT_APP_E_USER_ID
-      )
-      .then(() => {
-        document.querySelector(".Alert").style.display = "flex";
-        setAlert({
-          show: true,
-          error: false,
+    if (contact.from_name && contact.email && contact.message) {
+      emailjs
+        .send(
+          process.env.REACT_APP_E_SERVICE_ID,
+          process.env.REACT_APP_E_TEMPLATE_ID,
+          contact,
+          process.env.REACT_APP_E_USER_ID
+        )
+        .then(() => {
+          document.querySelector(".Alert").style.display = "flex";
+          setAlert({
+            show: true,
+            error: false,
+          });
+          setContact({
+            from_name: null,
+            email: null,
+            message: null,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+          document.querySelector(".Alert").style.display = "flex";
+          setAlert({
+            show: true,
+            error: true,
+          });
+          setContact({
+            from_name: null,
+            email: null,
+            message: null,
+          });
         });
-      })
-      .catch((err) => {
-        console.log(err);
-        document.querySelector(".Alert").style.display = "flex";
-        setAlert({
-          show: true,
-          error: true,
-        });
+    } else {
+      document.querySelector(".Alert").style.display = "flex";
+      setAlert({
+        show: true,
+        error: true,
       });
+    }
   };
   return (
     <div id="Contact">
