@@ -1,25 +1,86 @@
 #Projects {
   height: 100%;
+  width: 100%;
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#projectRow {
+  height: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  justify-content: end;
   column-gap: 30px;
 }
 
 .ProjectContainer {
+  height: 100%;
   justify-self: stretch;
   grid-column: auto / span 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .ProjectBlock {
-  background-color: white;
   width: 100%;
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  overflow: hidden;
 }
 
-#block-1 {
+#acnh {
   background-image: url(../images/acnh-1.gif);
+  background-size: contain;
+}
+
+#dl {
+  background-image: url("../images/dl-imaging-preview.jpg");
+  background-size: contain;
+}
+
+.ProjectBlock:hover {
+  cursor: pointer;
+}
+
+.teitter-timeline {
+  overflow: hidden;
+}
+
+.contactButton {
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactButton p {
+  margin-bottom: 5px;
+}
+
+.contactButton:hover {
+  cursor: pointer;
+}
+
+.projectTitle {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.projectTitle p {
+  margin-right: 5px;
+}
+
+.projectTitle a:hover {
+  color: var(--red);
+  transition: var(--color-transition);
 }

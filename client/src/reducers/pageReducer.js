@@ -1,7 +1,10 @@
 import { SET_PAGE } from "../actions";
 
+const href = window.location.href.split("/");
+const path = href[href.length - 1].substr(1);
+
 const initialState = {
-  activePage: "Home",
+  activePage: path ? path : "Home",
 };
 
 export default function (state = initialState, action) {

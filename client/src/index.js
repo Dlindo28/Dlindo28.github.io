@@ -7,6 +7,12 @@ import {
   faGithub,
   faInstagramSquare,
   faLinkedin,
+  faGoogle,
+  faReact,
+  faPython,
+  faJava,
+  faJs,
+  faGit,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
@@ -26,7 +32,13 @@ library.add(
   faEnvelope,
   faAngleUp,
   faAngleDown,
-  faCircle
+  faCircle,
+  faGoogle,
+  faReact,
+  faPython,
+  faJava,
+  faJs,
+  faGit
 );
 
 ReactDOM.render(

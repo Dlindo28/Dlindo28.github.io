@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../css/App.css";
 
 import Home from "../components/Home";
@@ -7,11 +7,16 @@ import Footer from "../components/Footer";
 import SideNav from "../components/SideNav";
 import About from "../components/About";
 import Projects from "../components/Projects";
-import Gallery from "../components/Gallery";
-import Shop from "../components/Shop";
 import Contact from "../components/Contact";
+import { useSelector } from "react-redux";
 
 const App = () => {
+  const page = useSelector((store) => store.pageReducer.activePage);
+  useEffect(() => {
+    if (page) {
+      window.location.href = `#${page}`;
+    }
+  }, []);
   return (
     <div className="App">
       <Header />
@@ -19,8 +24,6 @@ const App = () => {
         <Home />
         <About />
         <Projects />
-        <Gallery />
-        <Shop />
         <Contact />
       </div>
       <SideNav />

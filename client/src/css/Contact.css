@@ -2,10 +2,80 @@
   margin-top: 10px;
   height: 100%;
   margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .ContactContainer {
-  background-color: white;
+  background-color: var(--white);
   height: 80%;
   margin-top: 20px;
+}
+
+.contactForm {
+  grid-column-start: 2;
+  background-color: var(--light);
+  height: 80%;
+  margin-top: 20px;
+  color: var(--white);
+  justify-items: end;
+}
+
+input[type="submit"] {
+  width: 25%;
+  float: right;
+  height: 10%;
+  background-color: var(--red);
+  border: none;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  border: none;
+  padding: 5px 0px;
+  border-bottom: 2px solid var(--white);
+  background-color: var(--light);
+  margin-bottom: 10vh;
+  color: var(--white);
+}
+
+input:focus {
+  color: var(--white);
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--light) inset;
+}
+
+.contactSubmit {
+  grid-column-start: 2;
+  justify-self: end;
+  width: 25%;
+  height: 30%;
+}
+
+label {
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+.contactInfo {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contactLink p {
+  margin-left: 10px;
 }

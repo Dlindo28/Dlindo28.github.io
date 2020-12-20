@@ -1,19 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import emailjs from "emailjs-com";
 import "../css/Contact.css";
 
+import Button from "./Button";
+
 const Contact = () => {
+  const [contact, setContact] = useState({
+    from_name: null,
+    email: null,
+    message: null,
+  });
+  const handleTextChange = (e) => {
+    e.preventDefault();
+    setContact({
+      ...contact,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+    emailjs
+      .send(
+        process.env.REACT_APP_E_SERVICE_ID,
+        process.env.REACT_APP_E_TEMPLATE_ID,
+        contact,
+        process.env.REACT_APP_E_USER_ID
+      )
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
   return (
     <div id="Contact">
-      <h1>Contact</h1>
-      <form onSubmit={() => console.log("ok")}>
-        <label>
-          Name:
-          <textarea
-            value={""}
-            onChange={() => console.log("changed")}
-          ></textarea>
-        </label>
-        <input type="submit" value="Submit" />
+      <div className="contactInfo">
+        <h1>Contact Me</h1>
+        <div className="contactLink">
+          <FontAwesomeIcon icon={["fab", "google"]} />
+          <p>dilindo28@gmail.com</p>
+        </div>
+        <div className="contactLink">
+          <FontAwesomeIcon icon={["fab", "linkedin"]} />
+          <p>daniel-lindo</p>
+        </div>
+        <div className="contactLink">
+          <FontAwesomeIcon icon={["fab", "github"]} />
+          <p>Dlindo28</p>
+        </div>
+        <div className="contactLink">
+          <FontAwesomeIcon icon={["fab", "instagram-square"]} />
+          <p>dl.imaging</p>
+        </div>
+      </div>
+      <form className="contactForm" onSubmit={sendMessage}>
+        <label htmlFor="name">Name</label>
+        <input
+          type="text"
+          name="from_name"
+          onChange={handleTextChange}
+          autoComplete="off"
+        />
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          onChange={handleTextChange}
+          autoComplete="off"
+        />
+        <label htmlFor="message">Message</label>
+        <input
+          type="text"
+          name="message"
+          onChange={handleTextChange}
+          autoComplete="off"
+        />
+        <input type="submit" value="Submit" className="clearfix" />
       </form>
     </div>
   );

@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../css/Button.css";
 
-const Button = ({ text }) => {
+const Button = ({ children, onClick, className }) => {
   return (
-    <div className="Button">
-      <a href="#">{text}</a>
+    <div className={`Button ${className}`} onClick={onClick}>
+      <p>{children}</p>
     </div>
   );
 };
