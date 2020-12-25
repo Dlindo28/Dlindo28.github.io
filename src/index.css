@@ -37,7 +37,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(var(--dark-90), var(--dark-90)),
-    url(./images/BG\ Pic.png) no-repeat;
+    url(./images/BG\ Pic.jpg) no-repeat;
   background-size: cover;
   animation: fadeIn 2s ease;
 }
